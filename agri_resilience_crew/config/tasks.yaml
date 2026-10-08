@@ -1,0 +1,73 @@
+climate_impact_assessment:
+  description: >
+    Task 1: Climate Impact Assessment.
+    Assess the {horizon_days}-day precipitation outlook starting {as_of} for {county},
+    covering each of these sub-counties: {sub_counties}.
+    Call kmd_climate_outlook once per sub-county. Report the tercile probabilities,
+    expected vs normal rainfall, anomaly %, SPI, onset and cessation, dry-spell, flood
+    and heat-stress risk. Derive the safest rain-fed planting window. Note where
+    sub-counties differ materially.
+    Season ledger context: {historical_context}
+  expected_output: >
+    A ClimateImpactAssessment with the overall risk_level, expected rainfall and anomaly
+    for the primary sub-county, a planting window (null if there is no reliable onset),
+    per-sub-county notes, key risks and a concise summary.
+  agent: kmd_analyst
+
+market_price_volatility_analysis:
+  description: >
+    Task 2: Market Price Volatility Analysis.
+    For each crop in [{crops}], call kamis_price_fetcher with origin_county={county}
+    to get current KAMIS wholesale averages across {markets}. Report price velocity
+    (KES/kg/day), acceleration, 30-day volatility and z-score, and the haul-to-market
+    margin over farmgate after transport, cess and spoilage. Classify each crop's trend
+    as rising, flat or falling, and name the best feasible market.
+  expected_output: >
+    A MarketVolatilityAnalysis with one entry per crop (best market, latest price,
+    velocity, volatility, net margin per kg, trend, note) and a summary that ranks the
+    crops by market attractiveness.
+  agent: kamis_analyst
+
+agronomic_feasibility_audit:
+  description: >
+    Task 3: Agronomic Feasibility & NEMA Audit.
+    Using the climate assessment's rainfall anomaly, call kalro_soil_suitability for
+    every crop in [{crops}] at the primary sub-county of {county}. Then audit the
+    likely crop switches: check Beans, Cabbages, Maize, Onions, Tomatoes and Irish
+    Potatoes wherever a requested crop scores S3 or N. Verify soil-moisture planting
+    thresholds, pH amendments, pest advisories and NEMA/WRA/KFS zoning constraints.
+  expected_output: >
+    An AgronomicFeasibilityAudit giving each requested crop's suitability class, expected
+    yield, blocking constraints and required actions; whether the plan is NEMA-compliant;
+    and a summary that names the best switch candidates.
+  agent: kalro_specialist
+  context:
+    - climate_impact_assessment
+    - market_price_volatility_analysis
+
+strategy_synthesis:
+  description: >
+    Task 4: Strategy Synthesis & Action Plan for {county} ({sub_counties}), {farm_size_ha} ha,
+    horizon {horizon_days} days from {as_of}, crops [{crops}].
+    You manage the Climate, Market and Agronomy specialists, whose research is in your
+    context. Cross-examine market trends against climate risk. Where findings conflict
+    (e.g. rising prices but a high drought risk or S3 suitability), delegate a targeted
+    question to the relevant specialist before deciding, and record each resolution in
+    conflicts_resolved.
+    For every requested crop, give an action (plant, expand, hold, switch with switch_to,
+    or avoid), planting and harvest windows, a target market, and expected yield, price,
+    revenue, cost and gross margin per hectare. Have the Market specialist run
+    gross_margin_calculator so the arithmetic is exact. Price must be the realistic
+    net-back to the farmer, not the headline wholesale price.
+    Add risk mitigations, a dated week-by-week pricing playbook with explicit triggers,
+    and NEMA/WRA/KFS compliance flags. List every data source in data_provenance, and set
+    synthetic=true where the tool provenance says so.
+    {risk_mandate}
+    Season ledger context: {historical_context}
+  expected_output: >
+    A complete AgriStrategyOutput JSON object: the executive 90-day playbook with
+    expected profit margins, optimal harvest windows and climate risk mitigations.
+  context:
+    - climate_impact_assessment
+    - market_price_volatility_analysis
+    - agronomic_feasibility_audit

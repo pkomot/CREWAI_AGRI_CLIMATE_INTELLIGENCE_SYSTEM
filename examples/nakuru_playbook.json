@@ -1,0 +1,206 @@
+{
+  "county": "Nakuru",
+  "sub_counties": [
+    "Molo",
+    "Naivasha"
+  ],
+  "season": "OND Short Rains 2026",
+  "as_of": "2026-10-08",
+  "horizon_days": 90,
+  "climate_risk_level": "high",
+  "climate_summary": "OND Short Rains 2026: tercile probabilities above/near/below = 20%/33%/47%. Molo: 180 mm expected vs 215 mm normal (-17%), high risk, onset ~18 Oct; Naivasha: 96 mm expected vs 115 mm normal (-17%), high risk, no reliable onset.",
+  "market_summary": "Irish Potatoes: best market Nairobi Wakulima at KES 39.8/kg (rising, +0.17 KES/kg/day, vol 14%), haul margin KES 14.6/kg over farmgate; Maize: best market Nairobi Wakulima at KES 50.0/kg (falling, -0.13 KES/kg/day, vol 5%), haul margin KES 10.8/kg over farmgate; Tomatoes: best market Kisumu Kibuye at KES 59.7/kg (flat, -0.01 KES/kg/day, vol 15%), haul margin KES 34.3/kg over farmgate.",
+  "crop_plans": [
+    {
+      "crop": "Irish Potatoes",
+      "action": "switch",
+      "switch_to": "Beans",
+      "planting_window_start": "2026-10-15",
+      "planting_window_end": "2026-11-08",
+      "harvest_window_start": "2027-01-28",
+      "harvest_window_end": "2027-03-07",
+      "target_market": "Nairobi Wakulima",
+      "expected_yield_t_per_ha": 8.83,
+      "expected_price_kes_per_kg": 32.75,
+      "expected_revenue_kes_per_ha": 289182.0,
+      "expected_cost_kes_per_ha": 320000.0,
+      "expected_gross_margin_kes_per_ha": -30818.0,
+      "expected_margin_pct": -10.66,
+      "confidence": 0.35,
+      "rationale": "S3 suitability (0.55; limits: rainfall deficit (0.40)); OND Short Rains 2026 outlook -17% rainfall (high risk); price trend rising at Nairobi Wakulima; net-back KES 32.8/kg vs break-even KES 36.2/kg. Switch candidate Beans: S2 suitability, projected gross margin 37%."
+    },
+    {
+      "crop": "Maize",
+      "action": "plant",
+      "switch_to": null,
+      "planting_window_start": "2026-10-15",
+      "planting_window_end": "2026-11-08",
+      "harvest_window_start": "2027-03-14",
+      "harvest_window_end": "2027-04-21",
+      "target_market": "Nairobi Wakulima",
+      "expected_yield_t_per_ha": 2.86,
+      "expected_price_kes_per_kg": 44.51,
+      "expected_revenue_kes_per_ha": 127299.0,
+      "expected_cost_kes_per_ha": 110000.0,
+      "expected_gross_margin_kes_per_ha": 17299.0,
+      "expected_margin_pct": 13.59,
+      "confidence": 0.42,
+      "rationale": "S2 suitability (0.71; limits: rainfall deficit (0.56)); OND Short Rains 2026 outlook -17% rainfall (high risk); price trend falling at Nairobi Wakulima; net-back KES 44.5/kg vs break-even KES 38.5/kg."
+    },
+    {
+      "crop": "Tomatoes",
+      "action": "switch",
+      "switch_to": "Beans",
+      "planting_window_start": "2026-10-15",
+      "planting_window_end": "2026-11-08",
+      "harvest_window_start": "2027-01-08",
+      "harvest_window_end": "2027-02-15",
+      "target_market": "Kisumu Kibuye",
+      "expected_yield_t_per_ha": 8.56,
+      "expected_price_kes_per_kg": 50.02,
+      "expected_revenue_kes_per_ha": 428171.0,
+      "expected_cost_kes_per_ha": 520000.0,
+      "expected_gross_margin_kes_per_ha": -91829.0,
+      "expected_margin_pct": -21.45,
+      "confidence": 0.25,
+      "rationale": "N suitability (0.32; limits: altitude (0.17), rainfall deficit (0.43)); OND Short Rains 2026 outlook -17% rainfall (high risk); price trend flat at Kisumu Kibuye; net-back KES 50.0/kg vs break-even KES 60.8/kg. Switch candidate Beans: S2 suitability, projected gross margin 37%."
+    }
+  ],
+  "risk_mitigations": [
+    {
+      "risk": "fall armyworm on Maize",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Scout weekly from emergence; act at 10-20% damaged plants with PCPB-registered products at early instar; consider push-pull.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "stalk borer on Maize",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Early planting, destroy crop residues, apply registered granules into the funnel when damage appears.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "Tuta absoluta on Tomatoes",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Use pheromone traps and insect netting; rotate registered active ingredients; remove infested leaves.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "Below-normal rainfall (-17%, SPI -0.55)",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Plant early-maturing/drought-tolerant varieties, mulch, and prepare drip or furrow irrigation and on-farm water pans before onset.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "Late or erratic onset of rains",
+      "likelihood": "high",
+      "impact": "moderate",
+      "mitigation": "Wait for 20-25 mm cumulative rain before dry-planting; stagger planting; keep seed in reserve for gap-filling.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "15 heat-stress days expected",
+      "likelihood": "moderate",
+      "impact": "moderate",
+      "mitigation": "Irrigate in early morning, use shade nets on nurseries, and time flowering away from the hottest weeks.",
+      "owner": "farm manager"
+    },
+    {
+      "risk": "Tomatoes price volatility 15% (30d)",
+      "likelihood": "high",
+      "impact": "moderate",
+      "mitigation": "Stagger planting in 2-3 blocks two weeks apart and pre-sell part of the crop to an offtaker.",
+      "owner": "farm manager"
+    }
+  ],
+  "pricing_playbook": [
+    {
+      "week_start": "2026-10-08",
+      "week_end": "2026-10-14",
+      "crop": "Irish Potatoes",
+      "action": "Lock input prices and line up Nairobi Wakulima buyers; benchmark against KAMIS weekly.",
+      "trigger": "Current Nairobi Wakulima price KES 39.8/kg (rising)."
+    },
+    {
+      "week_start": "2026-10-08",
+      "week_end": "2026-10-14",
+      "crop": "Maize",
+      "action": "Lock input prices and line up Nairobi Wakulima buyers; benchmark against KAMIS weekly.",
+      "trigger": "Current Nairobi Wakulima price KES 50.0/kg (falling)."
+    },
+    {
+      "week_start": "2026-10-08",
+      "week_end": "2026-10-14",
+      "crop": "Tomatoes",
+      "action": "Lock input prices and line up Kisumu Kibuye buyers; benchmark against KAMIS weekly.",
+      "trigger": "Current Kisumu Kibuye price KES 59.7/kg (flat)."
+    },
+    {
+      "week_start": "2027-01-08",
+      "week_end": "2027-01-21",
+      "crop": "Tomatoes",
+      "action": "Sell in tranches at Kisumu Kibuye; perishable, so pre-agree offtake",
+      "trigger": "Net-back >= KES 75.9/kg (1.25x break-even); otherwise sell to contracted offtaker."
+    },
+    {
+      "week_start": "2027-01-28",
+      "week_end": "2027-02-10",
+      "crop": "Irish Potatoes",
+      "action": "Sell in tranches at Nairobi Wakulima; hold unsold stock in diffused-light store (6-8 weeks)",
+      "trigger": "Net-back >= KES 45.3/kg (1.25x break-even); otherwise store and re-check weekly."
+    },
+    {
+      "week_start": "2027-03-14",
+      "week_end": "2027-03-27",
+      "crop": "Maize",
+      "action": "Sell in tranches at Nairobi Wakulima; hold unsold stock in hermetic bags (months)",
+      "trigger": "Net-back >= KES 48.1/kg (1.25x break-even); otherwise store and re-check weekly."
+    }
+  ],
+  "compliance_flags": [
+    "[KFS] Mau Forest Complex: No cultivation inside gazetted forest boundaries.",
+    "[NEMA] Wetlands and river banks: EMCA (Wetlands, River Banks, Lake Shores and Sea Shore Management) Regulations, 2009: conversion or drainage of wetlands needs NEMA approval and may need an EIA.",
+    "[WRA] Riparian reserve: No cultivation or structures on riparian land (6 m minimum, up to 30 m from the highest-ever water mark depending on watercourse width); abstraction needs a WRA permit."
+  ],
+  "conflicts_resolved": [
+    "Irish Potatoes: KAMIS shows rising prices but KMD flags high climate risk; resolved as 'switch' with staggered planting and irrigation backup.",
+    "Irish Potatoes: profitable haul to Nairobi Wakulima but site suitability is S3; agronomy overrides market, so the action is 'switch' (switch to Beans).",
+    "Tomatoes: profitable haul to Kisumu Kibuye but site suitability is N; agronomy overrides market, so the action is 'switch' (switch to Beans)."
+  ],
+  "data_provenance": [
+    {
+      "source": "KMD",
+      "mode": "mock",
+      "as_of": "2026-10-08",
+      "synthetic": true,
+      "note": ""
+    },
+    {
+      "source": "KAMIS",
+      "mode": "mock",
+      "as_of": "2026-10-08",
+      "synthetic": true,
+      "note": "4/4 markets, 90d window"
+    },
+    {
+      "source": "KALRO",
+      "mode": "mock",
+      "as_of": "2026-10-08",
+      "synthetic": true,
+      "note": ""
+    },
+    {
+      "source": "NEMA",
+      "mode": "mock",
+      "as_of": "2026-10-08",
+      "synthetic": true,
+      "note": "illustrative zoning screen; confirm with county NEMA office"
+    }
+  ],
+  "engine": "deterministic",
+  "disclaimer": "Decision support only. Validate against current KAMIS, KMD and county extension advisories before committing capital."
+}
